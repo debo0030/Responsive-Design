@@ -1,0 +1,316 @@
+/**************************************************
+Fonts
+Playfair Display
+Georgia
+Source Sans Pro
+Courier
+
+Font Scaling
+6.854rem
+4.236rem
+2.618rem
+1.618rem
+1.0rem
+0.618rem
+
+Colour scheme - Monochromatic
+#91CDD1
+#6A9FA3
+#507073
+#404040
+#1B2526
+
+**************************************************/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro', 'Courier', sans-serif;
+}
+/***************************
+DEFAULTS - MOBILE FIRST
+***************************/
+
+h1{
+    font: bold 2.618rem 'Playfair Display', 'Georgia', serif;
+    color: #FFF;
+
+}
+h2{
+    font: bold 1.618rem 'Playfair Display', 'Georgia', serif;
+}
+li, p, a{
+    font: bold 1.0rem 'Source Sans Pro', 'Courier', sans-serif;
+}
+pre, code, kbd{
+    font: normal 0.618rem 'Playfair Display', 'Georgia',
+}
+/***************************
+    LAYOUT - MOBILE FIRST
+***************************/
+.wrapper{
+    width: 95%;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    background-image: url("../images/placeimg_900_220_nature.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 180px;
+    position: relative;
+    border-bottom: 0.5rem solid #91CDD1;
+}
+
+header h1 {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    text-shadow: 3px 2px 10px black;
+}
+
+header img{
+  width: 100%;
+  height: auto;
+  background-image: cover;
+  background-repeat: no-repeat;
+}
+
+nav{
+    width: 100%;
+    margin-top: 3px;
+}
+nav>ul{
+    width: 100%;
+    /*clear: both;*/
+}
+nav li{
+    width: 100%;
+    list-style: none;
+    margin: 1px;
+}
+nav a,
+nav a:link,
+nav a:visited{
+    display: block;
+    font: bold 1.618rem 'Source Sans Pro', 'Courier', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #6A9FA3;
+    color: #fff;
+    padding: 5px;
+
+}
+nav a:active,
+nav a:focus,
+nav a:hover{
+    color: #313F40;
+    background-color: #91CDD1;
+    border-radius: 5px;
+
+}
+main{
+    width: 100%;
+    margin: auto;
+}
+.col{
+    width: 100%;
+}
+.col img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    float: left;
+    margin: 0 8px 5px 0;
+    background-color: #fff;
+}
+p{
+  margin: 0 0 1.3rem;
+}
+footer{
+    width: 100%;
+    display: block;
+    color: #6A9FA3;
+    border-top: 5px solid #6A9FA3;
+    margin: 0.5rem 0 1rem;
+    clear: both;
+}
+footer ul{
+  list-style: none;
+}
+footer ul li a{
+  text-decoration: none;
+  color: #6A9FA3;
+}
+footer ul li a:active,
+footer ul li a:focus,
+footer ul li a:hover{
+    list-style: none;
+    text-decoration: none;
+    color: #313F40;
+}
+
+/* -- FIRST BREAK POINT - TABLET VIEW -- */
+@media screen and (min-width:600px){
+   /*
+    --Set the widths--
+    wrapper - 100%
+    header - 100%
+    nav - 90%
+    links - 20% of nav
+    main - 90%
+    columns - 50% of main
+    column image - 60% of column
+    footer - 90%
+    */
+
+
+    h1 {
+      font-size: 4.236rem;
+    }
+    h2{
+      font-size: 2.618rem;
+    }
+
+    .wrapper{
+        width: 100%;
+    }
+
+    header h1 {
+        left: 3rem;
+        bottom: 2rem;
+      }
+
+    nav{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav li{
+          width: calc(20% - 2px);
+          display: inline;
+          float: left;
+          height: auto;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited{
+      padding: 0.5rem 0.5rem;
+    }
+
+    main{
+        width: 90%;
+      }
+
+    .col {
+        width: 50%;
+        float: left;
+    }
+    .first {
+        padding-right: 2rem;
+    }
+    .col img{
+        width: 60%;
+      }
+    footer{
+        width: 90%;
+        margin: 0.5rem 2rem 1rem;
+      }
+      footer p {
+        float: left;
+        padding: 0.1rem 0 0 0;
+      }
+      footer li {
+        display: inline;
+        padding-left: 1rem;
+      }
+
+}
+
+/* -- SECOND BREAK POINT - DESKTOP VIEW -- */
+@media screen and (min-width: 800px){
+    /*
+    --Set the widths--
+    header - 100%
+    nav - 90%
+    links - 20% of nav
+    main - 90%
+    columns - 50% of main
+    column image - 50% of column
+    footer - 100%
+    */
+    .wrapper{
+      margin: 0 auto;
+    }
+    nav{
+        width: 90%;
+        margin: 0 auto 0 2rem;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited{
+        text-align: center;
+      }
+    main{
+        width: 90%;
+        margin: 0 auto 0 2rem;
+      }
+
+    .col img{
+        width: 50%;
+      }
+    footer{
+        width: 100%;
+        margin: 0.5rem 0 1rem;
+      }
+    footer p {
+      margin: 0 2rem;
+    }
+}
+
+/* -- THIRD BREAK POINT - LARGE DESKTOP VIEW -- */
+@media screen and (min-width: 1200px){
+    /*
+    --Set the widths--
+    header - 100%
+    nav - 30%
+    links - 100% of nav
+    main - 70%
+    columns - 50% of main
+    column image - 55% of column width
+    footer - 100%
+    */
+    nav{
+        width: 30%;
+        width: calc(30% - 4rem);
+        float: left;
+      }
+    nav li{
+        width: 100%;
+      }
+    main{
+          width: 70%;
+          width: calc(70% - 2rem);
+          margin: 0 2rem 0 2rem;
+          float: right;
+        }
+    .col {
+          width: 50%;
+          float: left;
+        }
+
+    .col img{
+          width: 55%;
+
+        }
+}
